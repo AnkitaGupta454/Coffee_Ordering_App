@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Coffee Ordering App</string>
+    <string name="quantity">QUANTITY</string>
+    <string name="_0">2</string>
+    <string name="order">ORDER</string>
+    <string name="thank_you" />
+    <string name="order_summary_price" />
+    <string name="order_summary_quantity">summary</string>
+    <string name="order_summary_email_subject">emailsubject</string>
+</resources>

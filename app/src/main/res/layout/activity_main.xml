@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/InputName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your name"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/Toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOPPINGS"
+        android:layout_marginTop="10dp"
+        android:textColor=" #000000"
+        app:layout_constraintTop_toBottomOf="@id/InputName"/>
+    <CheckBox
+        android:id="@+id/Cream_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Whipped Cream"
+        android:layout_marginLeft="24dp"
+        android:textSize="16sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/Toppings"/>
+    <CheckBox
+        android:id="@+id/Chocolate_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chocolate"
+        android:layout_marginLeft="24dp"
+
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/Cream_checkbox"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/quantity"
+        android:textColor=" #000000"
+        app:layout_constraintTop_toBottomOf="@id/Chocolate_checkbox"
+       />
+
+    <Button
+        android:id="@+id/Add_Button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        android:onClick="increment"
+        app:layout_constraintLeft_toRightOf="@id/Quantity_text_view"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Quantity_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor=" #000000"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:layout_marginLeft="70dp"
+        app:layout_constraintRight_toLeftOf="@id/Add_Button"
+        app:layout_constraintLeft_toRightOf="@id/Subtract_Button"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <Button
+        android:id="@+id/Subtract_Button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        android:onClick="decrement"
+        android:layout_marginLeft="120dp"
+        app:layout_constraintRight_toLeftOf="@id/Quantity_text_view"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <Button
+        android:id=" @+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="submitOrder"
+        android:text="@string/order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Subtract_Button"  />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
